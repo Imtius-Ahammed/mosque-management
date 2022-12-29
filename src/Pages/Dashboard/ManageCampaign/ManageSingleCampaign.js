@@ -8,6 +8,7 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import React, { useState } from 'react';
 
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import { WidthFull } from '@mui/icons-material';
 
 
 const ManageSingleCampaign = ({ cause }) => {
@@ -47,11 +48,14 @@ const ManageSingleCampaign = ({ cause }) => {
 
     return (
         <>
-            <div className=' col-md-4 py-3 px-3 d-flex justify-content-center'>
+            <div className=' col-md-6 col-lg-4   py-3 px-3 justify-content-center'>
                 <div class="help_card_shadow">
                     <div class="card_banner card-img-top help-banner"
                         style={{
-                            background: `url(${img}) `
+                            background: `url(${img}) `,
+                            backgroundRepeat: "no-repeat",
+                            Width:'200px',
+                            height:'300px'
                         }}
                     >
 

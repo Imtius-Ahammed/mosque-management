@@ -70,7 +70,7 @@ const ManageCampaign = ({ refetch }) => {
                 </header> */}
 
                 <div className="card-body">
-                    <div className="row ">
+                    <div className="row  ">
 
                         {
                             causes?.map(cause => <ManageSingleCampaign
