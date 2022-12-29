@@ -42,7 +42,7 @@ const ManageSingleEvent = ({ event }) => {
     }
     return (
         <>
-            <div className=' col-md-4 py-3 px-3 d-flex justify-content-center'>
+            <div className=' col-md-6 col-lg-4   py-3 px-3 justify-content-center'>
                 <div class="help_card_shadow">
                     <div class="card_banner card-img-top help-banner"
                         style={{

@@ -33,7 +33,7 @@ const ManageEvent = () => {
     }, [])
 
     return (
-        <section className="content-main">
+        <section className="content-main ">
             <div className="content-header">
                 <h2 className="content-title">Manage Events</h2>
                 <div>
