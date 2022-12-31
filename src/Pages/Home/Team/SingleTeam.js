@@ -1,10 +1,16 @@
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGoogle, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const SingleTeam = ({ expert }) => {
-    const { img, name, short_description, facebook, twitter, instagram, google } = expert;
+    const { img, name, short_description, facebook, twitter, instagram, google,role } = expert;
+    console.log(expert)
+    const [experts, setExperts]=useState([])
+    
+
+    
     return (
         <div class="col-12 col-md-6 col-lg-3 col-xl-3 d-flex justify-content-center mt-3 mt-md-3 mt-lg-0 mt-xl-0">
 
@@ -17,10 +23,10 @@ const SingleTeam = ({ expert }) => {
                     </div>
                 </div>
 
-
+                 <h2 class="mt-4">{role}</h2>
                 <h5 class="team_heading mt-4">{name}</h5>
                 <p class="team_body mt-3 about-scholar"  >
-                    {short_description.slice(0, 70)}
+                    {short_description}
                 </p>
                 <a href={facebook} class="service_read_more_btn p-2 m-1 social_media_icon rounded-circle">
 
@@ -40,7 +46,9 @@ const SingleTeam = ({ expert }) => {
                 <a href={google} class="service_read_more_btn p-2 m-1 social_media_icon rounded-circle">
                     <FontAwesomeIcon icon={faGoogle} className="icon" />
                 </a>
+              
             </div>
+          
 
         </div>
     );

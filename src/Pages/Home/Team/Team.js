@@ -1,10 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import "./Team.css";
-import member from "../../../1_images/4_team-section/1_member.jpg"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLongArrowRight, faFacebook, faMosque, faHands, faHand, faHandsHelping, faBox, faBook, faFaceAngry } from '@fortawesome/free-solid-svg-icons';
+
+
 import SingleTeam from './SingleTeam';
 import Experts from '../../../hooks/Experts';
+
+import Imam from './Imam';
+import Scolar from '../../Scolar/Scolar';
+import Khatib from './Khatib';
+import Chairman from './Chairman';
+import ViceChairman from './ViceChairman';
+import Member from './Member';
+import Khadem from './Khadem';
+import SecretaryGeneral from './SecretaryGeneral';
 const Team = () => {
 
 
@@ -30,46 +38,14 @@ const Team = () => {
 					Highly Qualified Team Supervises psum dolor sit amet, consectetur adipisicing elit, sed do <br></br> eiusmod
 					tempor incididunt ut labore et dolore magna aliqua.
 				</p>
+	
+
+
 
 				<div class="row mt-5 d-flex justify-content-center text-center poppins">
 
 
-					{/* <!-- 1st card --> */}
-					{/* <div class="col-12 col-md-6 col-lg-3 col-xl-3 d-flex justify-content-center mt-3 mt-md-3 mt-lg-0 mt-xl-0">
-
-						<div class="col-12 card_shadow pt-5 pb-5 ps-3 pe-3 team_card">
-							<div class="team_section_img_container ">
-								<div class="d-flex justify-content-center">
-									<div class="team_section_img p-2 rounded-circle ">
-										<img src={member} class="rounded-circle" />
-									</div>
-								</div>
-							</div>
-
-
-							<h5 class="team_heading mt-4">Bilal Hatim</h5>
-							<p class="team_body mt-3 about-scholar"  >
-								About Scholar Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-							</p>
-							<a href="#" class="service_read_more_btn p-1 m-1 social_media_icon rounded-circle">
-								<FontAwesomeIcon icon={faBook} className="icon" />
-
-							</a>
-
-							<a href="#" class="service_read_more_btn p-1 m-1 social_media_icon rounded-circle">
-
-								<FontAwesomeIcon icon={faBook} className="icon" />
-							</a>
-							<a href="#" class="service_read_more_btn p-1 m-1 social_media_icon rounded-circle">
-								<FontAwesomeIcon icon={faBook} className="icon" />
-							</a>
-							<a href="#" class="service_read_more_btn p-1 m-1 social_media_icon rounded-circle">
-								<FontAwesomeIcon icon={faBook} className="icon" />
-							</a>
-						</div>
-
-					</div> */}
-
+					
 
 					{
 						experts.map(expert => <SingleTeam
@@ -81,7 +57,30 @@ const Team = () => {
 
 
 				</div>
+				<div class="row mt-5 d-flex justify-content-center text-center poppins">
+			
+
+			</div>
 			</section>
+			<section>
+			<Imam></Imam>
+			<Khatib></Khatib>
+      <Khadem></Khadem>
+      <Chairman></Chairman>
+      <SecretaryGeneral></SecretaryGeneral>
+      <Member></Member>
+			
+
+			</section>
+			{/* <section><Scolar></Scolar></section>
+			<section><Khatib></Khatib></section>
+			<section><Chairman></Chairman></section>
+	
+		<section><ViceChairman></ViceChairman></section>
+			<section><Member></Member></section> */}
+
+		
+			
 		</div>
 	);
 };

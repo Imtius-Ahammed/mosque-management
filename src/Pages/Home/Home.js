@@ -24,7 +24,7 @@ const Home = () => {
             <Service></Service>
             <Help></Help>
             <Support></Support>
-            <Team></Team>
+            {/* <Team></Team> */}
             <Event></Event>
             <PrayerInfo></PrayerInfo>
             <Tetimonial></Tetimonial>

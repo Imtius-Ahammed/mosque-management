@@ -16,6 +16,17 @@ import Side from '../Dashboard/Side/Side';
 import Khutba from '../Dashboard/Khutba/Khutba';
 import ListenKhutba from '../ListenKhutba/ListenKhutba';
 
+
+import Imam from '../Home/Team/Imam';
+
+import Chairman from '../Home/Team/Chairman';
+import ViceChairman from '../Home/Team/ViceChairman';
+import SecretaryGeneral from '../Home/Team/SecretaryGeneral';
+import Khatib from '../Home/Team/Khatib';
+import Khadem from '../Home/Team/Khadem';
+import Member from '../Home/Team/Member';
+
+
 const Routesin = () => {
     return (
         <div className="App">
@@ -30,9 +41,12 @@ const Routesin = () => {
                 <Route path="/info" element={<Info></Info>}></Route>
                 <Route path="/home" element={<Home></Home>}></Route>
                 <Route path="/side" element={<Side></Side>}></Route>
-                <Route path='/donate' element={<Donate></Donate>}></Route>
+                <Route path='/donate' element={<Donate></Donate>}>
+                </Route>
+                
                 <Route path='/scolar' element={<Scolar></Scolar>}></Route>
-                <Route path='/khutba' element={<ListenKhutba></ListenKhutba>}></Route>
+                
+                <Route path='/khutba' element={<ListenKhutba></ListenKhutba> }></Route>
 
 
                 <Route path="/login" element={<Login></Login>}></Route>
@@ -42,6 +56,14 @@ const Routesin = () => {
                 <Route path="/addcampaign" element={<AddCampaign></AddCampaign>}></Route>
 
                 <Route path="/payment/:id" element={<Payment></Payment>}></Route>
+                <Route path="/allImam" element={<Imam></Imam>}></Route>
+                <Route path="/khatib" element={<Khatib></Khatib>}></Route>
+                <Route path="/khadem" element={<Khadem></Khadem>}></Route>
+                <Route path="/chairman" element={<Chairman></Chairman>}></Route>
+                <Route path="/viceChairman" element={<ViceChairman></ViceChairman>}></Route>
+                <Route path="/secretaryGeneral" element={<SecretaryGeneral></SecretaryGeneral>}></Route>
+                <Route path="/member" element={<Member></Member>}></Route>
+                
 
 
                 <Route path='/campaign/:id' element={

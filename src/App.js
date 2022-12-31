@@ -1,19 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route, Router, Routes } from 'react-router-dom';
-import Home from './Pages/Home/Home';
-import Donate from './Pages/Donate/Donate';
-import Header from './Pages/Shared/Header/Header';
-import Scolar from './Pages/Scolar/Scolar';
-import Login from './Pages/Login/Login/Login';
-import Register from './Pages/Login/Register/Register';
+import { Route,  Routes } from 'react-router-dom';
+
 import AddCampaign from './Pages/Dashboard/AddCampaign/AddCampaign';
-import HelpDetails from './Pages/Home/Help/HelpDetails';
-import Dashboard from './Pages/Dashboard/Dashboard';
-import { Stack } from 'react-bootstrap';
-import Footer from './Pages/Shared/Footer/Footer';
-import { useState } from 'react';
+
 import Routesin from './Pages/Routes/Routesin';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageCampaign from './Pages/Dashboard/ManageCampaign/ManageCampaign';
@@ -24,15 +15,19 @@ import AddEvent from './Pages/Dashboard/ManageEvent/AddEvent';
 import ManageEvent from './Pages/Dashboard/ManageEvent/ManageEvent';
 import UpdateEvent from './Pages/Dashboard/ManageEvent/UpdateEvent';
 import User from './Pages/Dashboard/Users/User';
-import RequireAuth from './Pages/Login/RequireAuth';
+
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import Info from './Pages/Dashboard/Info';
 import AddImam from './Pages/Dashboard/AddImam';
 import AddExpert from './Pages/Dashboard/ManageExpert/AddExpert';
 import Khutba from './Pages/Dashboard/Khutba/Khutba';
-import Side from './Pages/Dashboard/Side/Side';
+
 import Sidebar from './Pages/Dashboard/Sidebar/Sidebar';
 import ManageKhutba from './Pages/Dashboard/Khutba/ManageKhutba';
+import ProfileUpdate from './Pages/Dashboard/Users/ProfileUpdate';
+import { Toaster } from 'react-hot-toast';
+import ModifyExperts from './Pages/Dashboard/ManageExpert/ModifyExperts';
+import UpdateExpert from './Pages/Dashboard/ManageExpert/UpdateExpert';
 
 
 function App() {
@@ -52,9 +47,14 @@ function App() {
           <Route path="managekhutba" element={<RequireAdmin><ManageKhutba></ManageKhutba></RequireAdmin>} />
 
           <Route path="profile" element={<Info></Info>} />
+          <Route path="update" element={<ProfileUpdate></ProfileUpdate>} />
+         
 
           <Route path="imam" element={<RequireAdmin><AddImam></AddImam></RequireAdmin>} />
           <Route path="addscolar" element={<RequireAdmin><AddExpert></AddExpert></RequireAdmin>} />
+          <Route path="modifyExperts" element={<RequireAdmin><ModifyExperts></ModifyExperts></RequireAdmin>} />
+          
+          <Route path="experts/:id" element={<RequireAdmin><UpdateExpert></UpdateExpert></RequireAdmin>} />
 
           <Route path="addkhutba" element={<RequireAdmin><Khutba></Khutba></RequireAdmin>} />
 
@@ -67,6 +67,7 @@ function App() {
 
         <Route path="*" element={<Routesin></Routesin>} />
       </Routes>
+      <Toaster></Toaster>
       <ToastContainer></ToastContainer>
     </div>
 
