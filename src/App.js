@@ -29,6 +29,7 @@ import { Toaster } from 'react-hot-toast';
 import ModifyExperts from './Pages/Dashboard/ManageExpert/ModifyExperts';
 import UpdateExpert from './Pages/Dashboard/ManageExpert/UpdateExpert';
 import ProfileUpdate from './Pages/Dashboard/ProfileUpdate/ProfileUpdate';
+import AllUserDonation from './Pages/AllUserDonation/AllUserDonation';
 
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
 
           <Route path='updatecampaign/:id' element={<RequireAdmin><UpdateCampaign></UpdateCampaign></RequireAdmin>}></Route>
           <Route path='updateevent/:id' element={<RequireAdmin><UpdateEvent></UpdateEvent></RequireAdmin>}></Route>
+          <Route path='allUserDonation' element={<RequireAdmin><AllUserDonation></AllUserDonation></RequireAdmin>}></Route>
 
         </Route>
 

@@ -243,6 +243,10 @@ const Sidebar = () => {
                     <FontAwesomeIcon icon={faChartBar} />
                     <span className="nav-link-name">Manage Event</span>
                   </Link>
+                  <Link to="alluserDonation" className="nav-link">
+                    <FontAwesomeIcon icon={faChartBar} />
+                    <span className="nav-link-name">AllUserDonation</span>
+                  </Link>
                 </>
               )}
               <Link to="profile" className="nav-link">
