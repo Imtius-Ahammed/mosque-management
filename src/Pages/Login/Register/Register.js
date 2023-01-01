@@ -8,6 +8,7 @@ import "./Register.css";
 
 import useToken from '../../../hooks/useToken';
 import { useForm } from 'react-hook-form';
+import { sendEmailVerification } from 'firebase/auth';
 
 const Register = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -64,8 +65,16 @@ const Register = () => {
         console.log('Updated profile');
         console.log(event)
         // navigate('/home')
+        verifyEmail()
 
 
+    }
+
+    const verifyEmail = ()=>{
+        sendEmailVerification(auth.currentUser)
+        .then(()=>{
+            alert('please check your email and verify')
+        })
     }
 
 
@@ -98,6 +107,7 @@ const Register = () => {
                                         className='btn btn-danger  w-50 mx-auto d-block my-2 '
                                         type="submit"
                                         value="Register" />
+                                       
                                 </form>
                                 <p className="text-light">Already have an account? <Link to='/login ' className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Login</Link></p>
                                 <button onClick={() => signInWithGoogle()} className="btn btn-success">Continue With Google</button>

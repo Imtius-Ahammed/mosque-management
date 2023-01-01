@@ -25,6 +25,7 @@ import SecretaryGeneral from '../Home/Team/SecretaryGeneral';
 import Khatib from '../Home/Team/Khatib';
 import Khadem from '../Home/Team/Khadem';
 import Member from '../Home/Team/Member';
+import DonationSuccess from '../Home/Help/DonationSuccess';
 
 
 const Routesin = () => {
@@ -63,6 +64,9 @@ const Routesin = () => {
                 <Route path="/viceChairman" element={<ViceChairman></ViceChairman>}></Route>
                 <Route path="/secretaryGeneral" element={<SecretaryGeneral></SecretaryGeneral>}></Route>
                 <Route path="/member" element={<Member></Member>}></Route>
+                <Route path="/donation/success" element={<DonationSuccess></DonationSuccess>}></Route>
+                
+
                 
 
 

@@ -91,9 +91,9 @@ const CheckoutForm = ({ datas }) => {
                     {success} your transcation id is: {transactionId}
                 </p>
             }
-            <Card style={{ width: '38rem' }} className="p-5">
+            <Card   className="p-5 container mx-auto  border">
                 <form onSubmit={handleSubmit}>
-                    <CardElement
+                    <CardElement className='w-75 container mx-auto'
                         options={{
                             style: {
                                 base: {

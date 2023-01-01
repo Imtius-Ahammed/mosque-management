@@ -24,10 +24,11 @@ import Khutba from './Pages/Dashboard/Khutba/Khutba';
 
 import Sidebar from './Pages/Dashboard/Sidebar/Sidebar';
 import ManageKhutba from './Pages/Dashboard/Khutba/ManageKhutba';
-import ProfileUpdate from './Pages/Dashboard/Users/ProfileUpdate';
+
 import { Toaster } from 'react-hot-toast';
 import ModifyExperts from './Pages/Dashboard/ManageExpert/ModifyExperts';
 import UpdateExpert from './Pages/Dashboard/ManageExpert/UpdateExpert';
+import ProfileUpdate from './Pages/Dashboard/ProfileUpdate/ProfileUpdate';
 
 
 function App() {
@@ -47,7 +48,7 @@ function App() {
           <Route path="managekhutba" element={<RequireAdmin><ManageKhutba></ManageKhutba></RequireAdmin>} />
 
           <Route path="profile" element={<Info></Info>} />
-          <Route path="update" element={<ProfileUpdate></ProfileUpdate>} />
+          <Route path="updateProfile/:email" element={<ProfileUpdate></ProfileUpdate>} />
          
 
           <Route path="imam" element={<RequireAdmin><AddImam></AddImam></RequireAdmin>} />

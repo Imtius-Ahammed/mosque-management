@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import "../../Pages/Dashboard/Info.css"
 const Info = () => {
@@ -120,7 +121,7 @@ const Info = () => {
                                 <hr />
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <a class="btn btn-info " target="__blank" href="#">Edit</a>
+                                    <Link to={`/dashboard/updateProfile/${user?.email}`}>Edit</Link>
                                     </div>
                                 </div>
                             </div>
