@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import helpbanner from "../../../../src/1_images/8_donate_page/1_donate_home.jpg";
 import linee from "../../../1_images/1_home/1_line.png";
+import auth from "../../../firebase.init";
 const HelpDetails = () => {
+  const [user]=useAuthState(auth);
   const { id } = useParams();
 
   const [cause, setCauses] = useState({});
@@ -165,7 +168,9 @@ const HelpDetails = () => {
                   name="name"
                   type="text"
                   required
+                  readOnly
                   className="mb-2 "
+                  defaultValue={user?.displayName}
                   placeholder="Your Name"
                 />
                 <label className="text-left ">
@@ -176,7 +181,9 @@ const HelpDetails = () => {
                   name="telEmail"
                   type="text"
                   required
+                  readOnly
                   className="mb-2 "
+                  defaultValue={user?.email}
                   placeholder="Telephone or Email"
                 />
                 <label className="text-left ">

@@ -16,6 +16,13 @@ const DonationSuccess = () => {
     .then(data=>setDonation(data));
   },[transactionId])
   console.log(donation)
+  if(!donation?._id){
+return(
+  <div>
+    No donation found
+  </div>
+)
+  }
 
   return (
     <div>
@@ -29,6 +36,7 @@ const DonationSuccess = () => {
                                 
                                 <th scope="col">Name</th>
                                 <th scope="col">TransactionID</th>
+                                <th scope="col">Amount</th>
                              
                                 <th scope="col">postCode</th>
                                 <th scope="col">Status</th>
@@ -48,6 +56,7 @@ const DonationSuccess = () => {
 
 </td>
 <td>{donation._id}</td>
+<td>{donation.amount}</td>
 
 <td>{donation.postCode}</td>
 <td>{donation.paidAt}</td>

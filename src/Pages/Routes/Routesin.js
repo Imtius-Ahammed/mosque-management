@@ -26,6 +26,8 @@ import Khatib from '../Home/Team/Khatib';
 import Khadem from '../Home/Team/Khadem';
 import Member from '../Home/Team/Member';
 import DonationSuccess from '../Home/Help/DonationSuccess';
+import DonationFail from '../Home/Help/DonationFail';
+import UserDonation from '../UserDonation/UserDonation';
 
 
 const Routesin = () => {
@@ -65,6 +67,8 @@ const Routesin = () => {
                 <Route path="/secretaryGeneral" element={<SecretaryGeneral></SecretaryGeneral>}></Route>
                 <Route path="/member" element={<Member></Member>}></Route>
                 <Route path="/donation/success" element={<DonationSuccess></DonationSuccess>}></Route>
+                <Route path="/donation/fail" element={<DonationFail></DonationFail>}></Route>
+                <Route path="/userDonation" element={<UserDonation></UserDonation>}></Route>
                 
 
                 
